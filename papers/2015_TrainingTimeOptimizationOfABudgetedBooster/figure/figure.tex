@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0] (F) at (0, 0) {
+		\begin{tikzpicture}
+		
+		\end{tikzpicture}
+	}
+	\node[inner sep=0, anchor=west] (L) at (P.east) {
+		\begin{tikzpicture}
+			\node[inner sep=0] (Accuracy) at (0, 0) {\includegraphics[scale=1]{accuracy.png}};
+			\node[inner sep=0, anchor=north] (AccuracyLegend) at ([yshift=-5mm]Accuracy.south) {\includegraphics[scale=1]{accuracy_legend.png}};
+		\end{tikzpicture}
+	};
+	\node[inner sep=0, anchor=west] (R) at ([xshift=1cm]L.east) {\includegraphics[scale=1]{webscope.png}};
+\end{tikzpicture}
+
+\end{document}

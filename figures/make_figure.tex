@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}
+\node[draw=none, minimum width=4cm, minimum height=1cm] (Phantom) at (0, 0) {};
+\node[right=0cm of Phantom] (A) {\includegraphics[height=13.5cm]{datasmash2_1.png}};
+\node[right=1cm of A] (B) {\includegraphics[height=13.5cm]{datasmash2_2.png}};
+\end{tikzpicture}
+\end{document}

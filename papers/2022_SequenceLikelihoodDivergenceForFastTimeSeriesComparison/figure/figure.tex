@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0, anchor=west] (A) at (0, 0) {\includegraphics[height=13.5cm]{part1.png}};
+	\node[inner sep=0, anchor=west] (B) at (A.east) {\includegraphics[height=13.5cm]{part2.png}};
+\end{tikzpicture}
+
+\end{document}
