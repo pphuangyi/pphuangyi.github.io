@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0, anchor=west] (A) at (0, 0) {\includegraphics[height=13.5cm]{model.png}};
+	\node[inner sep=0, anchor=north west] (B) at ([xshift=1.5cm]A.north east) {\includegraphics[height=7.5cm]{mae.png}};
+	\node[inner sep=0, anchor=north] (C) at (B.south) {\includegraphics[height=6cm]{prediction.png}};
+\end{tikzpicture}
+
+\end{document}
