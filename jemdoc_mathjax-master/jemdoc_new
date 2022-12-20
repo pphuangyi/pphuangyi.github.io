@@ -481,7 +481,11 @@ def doincludes(f, l):
 
 def nl(f, withcount=False, codemode=False):
   """Get input file line."""
-  s = f.inf.readline().decode('utf-8')
+  try:
+    s = f.inf.readline().decode('utf-8')
+  except:
+    print(f'the following sentence cannot be decoded:\n{f.inf.readline()}')
+    exit(1)
   if not s and f.otherfiles:
     f.nextfile()
     return nl(f, withcount, codemode)

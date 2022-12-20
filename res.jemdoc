@@ -1,6 +1,7 @@
-# jemdoc: menu{MENU}{index.html}
+# jemdoc: menu{MENU}{res.html}
 
 = Publications
+
 
 - /Dmitrii Torbunov, Yi Huang, Haiwang Yu, Jin Huang, Shinjae Yoo, Meifeng Lin, Brett Viren, Yihui Ren/, [./papers/2023_UVCGAN_UNetVisionTransformerCycle-consistentGANforUnpairedImage-to-imageTranslation/paper.pdf UVCGAN: UNet Vision Transformer Cycle-consistent GAN for Unpaired Image-to-image Translation], *[https://wacv2023.thecvf.com/home WACV 2023]*
 -- *Abstract:*: Unpaired image-to-image translation has broad applications in art, design, and scientific simulations. One early breakthrough was CycleGAN that emphasizes one-to-one mappings between two unpaired image domains via generative-adversarial networks (GAN) coupled with the cycle-consistency constraint, while more recent works promote one-to-many mapping to boost diversity of the translated images. Motivated by scientific simulation and one-toone
@@ -12,8 +13,7 @@ needs, this work revisits the classic CycleGAN framework and boosts its performa
 
 
 - /Yi Huang, Victor Rotaru, Ishanu Chattopadhyay/, [./papers/2022_SequenceLikelihoodDivergenceForFastTimeSeriesComparison/paper.pdf Sequence Likelihood Divergence For Fast Time Series Comparison], *Knowledge and Information Systems 2022*
--- *Abstract:* Comparing and contrasting subtle historical patterns is central to time series analysis. Here we introduce a new approach to quantify deviations in the underlying hidden stochastic generators of sequential discretevalued
-data streams. The proposed measure is universal in the sense that we can compare data streams without any feature engineering step, and without the need of any hyper-parameters. Our core idea here is the generalization of the Kullback-Leibler (KL) divergence, often used to compare probability distributions, to a notion of divergence between finite-valued ergodic stationary stochastic processes. Using this notion of process divergence, we craft a measure of deviation on finite sample paths which we call the sequence likelihood divergence (SLD) which approximates a metric on the space of the underlying generators within a well-defined class of discrete-valued stochastic processes. We compare the performance of SLD against the state of the art approaches, e.g., dynamic time warping (DTW) with synthetic data, real-world applications with electroencephalogram (EEG) data and in gait recognition, and on diverse time-series classification problems from the University of California, Riverside (UCR) time series classification archive. We demonstrate that the new tool is at par or better in classification accuracy, while being significantly faster in comparable implementations. Released in the publicly domain, we are hopeful that SLD will enhance the standard toolbox used in classification, clustering and inference problems in time series analysis.
+-- *Abstract:* Comparing and contrasting subtle historical patterns is central to time series analysis. Here we introduce a new approach to quantify deviations in the underlying hidden stochastic generators of sequential discretevalued data streams. The proposed measure is universal in the sense that we can compare data streams without any feature engineering step, and without the need of any hyper-parameters. Our core idea here is the generalization of the Kullback-Leibler (KL) divergence, often used to compare probability distributions, to a notion of divergence between finite-valued ergodic stationary stochastic processes. Using this notion of process divergence, we craft a measure of deviation on finite sample paths which we call the sequence likelihood divergence (SLD) which approximates a metric on the space of the underlying generators within a well-defined class of discrete-valued stochastic processes. We compare the performance of SLD against the state of the art approaches, e.g., dynamic time warping (DTW) with synthetic data, real-world applications with electroencephalogram (EEG) data and in gait recognition, and on diverse time-series classification problems from the University of California, Riverside (UCR) time series classification archive. We demonstrate that the new tool is at par or better in classification accuracy, while being significantly faster in comparable implementations. Released in the publicly domain, we are hopeful that SLD will enhance the standard toolbox used in classification, clustering and inference problems in time series analysis.
 -- The left figure is an example of the directed weighted graph obtained by analyzing the set of causal states of a stochastic process of Markov order two. The strongly connected component of the graph (marked by solid edges) is a probabilistic finite-state automaton that generates the process. The middle figure is a side-by-side semantic comparison of three time series models, the Markov chain model, the probabilistic finite-state automaton, and the hidden Markov model. The right figure shows convergence of log-likelihood scores to their theoretic values.  
 ~~~
 {}{img_left_indent}{./papers/2022_SequenceLikelihoodDivergenceForFastTimeSeriesComparison/figure/figure.png}{Sequence Likelihood Divergence For Fast Time Series Comparison}{}{320}{./papers/2022_SequenceLikelihoodDivergenceForFastTimeSeriesComparison/figure/figure.png}{60}
@@ -82,16 +82,14 @@ UCR Time Series Classification Archive, and show that we at par or better compar
 - /Yi Huang, Brian Powers, and Lev Reyzin/, [./papers/2015_TrainingTimeOptimizationOfABudgetedBooster/paper.pdf Training-Time Optimization of a Budgeted Booster], *[https://ijcai-15.org IJCAI2015]*
 -- *Abstract:* We consider the problem of feature-efficient prediction -- a setting where features have costs and the learner is limited by a budget constraint on the total cost of the features it can examine in test time. We focus on solving this problem with boosting by optimizing the choice of base learners in the training phase and stopping the boosting process when the learner’s budget runs out. We experimentally show that our method improves upon the boosting approach AdaBoostRS \[Reyzin, 2011\] and in many cases also outperforms the recent algorithm SpeedBoost \[Grubb and Bagnell, 2012\]. We provide a theoretical justication for our optimization method via the margin bound. We also experimentally show that our method outperforms pruned decision trees, a natural budgeted classifier.
 -- The image on the right shows the comparison of error rates v.s. costs of methods we metion in this paper on three datasets from the UCI machine learning repository, and the image on the right is that for Yahoo Webscop set 2 where the cost is real CPU time.
-
 ~~~
 {}{img_left}{./figures/budgeted-booster_combined.jpg}{Budgeted Booster}{}{250}
 ~~~
 
 
-= Theses:
-- *Ph.D. degree thesis:* [./papers/2017_PhDThesis_ProblemsInLearningUnderLimitedResourcesAndInformation.pdf Problems in Learning under Limited Resources and Information]
+= Ph.D. Theses: [./papers/2017_PhDThesis_ProblemsInLearningUnderLimitedResourcesAndInformation.pdf Problems in Learning under Limited Resources and Information]
 
-- *M.S. degree thesis:* Study on 3-Dimensional Parallelizable Finite Difference Time-Dependent Scheme for Maxwell's Equations, /available upon request/
+# - *M.S. degree thesis:* Study on 3-Dimensional Parallelizable Finite Difference Time-Dependent Scheme for Maxwell's Equations, /available upon request/
 # - *B.S. degree thesis:* C\+\+ Implementation of 2-Dimensional Delaunay Triangulation 
 
 # = Others:
