@@ -6,6 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
 <title></title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
 </head>
 <body>
 <table summary="Table for page layout." id="tlayout">
@@ -19,6 +28,8 @@
 </td>
 <td id="layout-content">
 <h1>Publications</h1>
+<p>(Click the figures to have a better view.)
+</p>
 <ul>
 <li><p><i>Dmitrii Torbunov, Yi Huang, Haiwang Yu, Jin Huang, Shinjae Yoo, Meifeng Lin, Brett Viren, Yihui Ren</i>, <a href="./papers/2023_UVCGAN_UNetVisionTransformerCycle-consistentGANforUnpairedImage-to-imageTranslation/paper.pdf" target=&ldquo;blank&rdquo;>UVCGAN: UNet Vision Transformer Cycle-consistent GAN for Unpaired Image-to-image Translation</a>, <b><a href="https://wacv2023.thecvf.com/home" target=&ldquo;blank&rdquo;>WACV 2023</a></b>
 </p>
@@ -27,7 +38,7 @@
 needs, this work revisits the classic CycleGAN framework and boosts its performance to outperform more contemporary models without relaxing the cycle-consistency constraint. To achieve this, we equip the generator with a Vision Transformer (ViT) and employ necessary training and regularization techniques. Compared to previous best-performing models, our model performs better and retains a strong correlation between the original and translated image. An accompanying ablation study shows that both the gradient penalty and self-supervised pre-training are crucial to the improvement. To promote reproducibility and open science, the source code, hyperparameter configurations, and pre-trained model are available at <a href="https://github.com/LS4GAN/uvcgan" target=&ldquo;blank&rdquo;>https://github.com/LS4GAN/uvcgan</a>.
 </p>
 </li>
-<li><p>We show the UNet-ViT generator of UVCGAN on the left and sample translations on the right. Click the figure to have an enlarged view. 
+<li><p>We show the UNet-ViT generator of UVCGAN on the left and sample translations on the right.
 </p>
 </li>
 </ul>
@@ -59,25 +70,35 @@ needs, this work revisits the classic CycleGAN framework and boosts its performa
 </p>
 <ul>
 <li><p><b>Abstract:</b> Policing efforts to thwart crime typically rely on criminal infraction reports, which implicitly manifest a complex relationship between crime, policing and society. As a result, crime prediction and predictive policing have stirred controversy, with the latest artificial intelligence-based algorithms producing limited insight into the social system of crime. Here we show that, while predictive models may enhance state power through criminal surveillance, they also enable surveillance of the state by tracing systemic biases in crime enforcement. We introduce a stochastic inference algorithm that forecasts crime by learning spatio-temporal dependencies from event reports, with a mean area under the receiver operating characteristic curve of approximately 90% in Chicago for crimes predicted per week within approximately 1000 ft. Such predictions enable us to study perturbations of crime patterns that suggest that the response to increased crime is biased by neighbourhood socio-economic status, draining policy resources from socio-economically disadvantaged areas, as demonstrated in eight major US cities.
-
+</p>
+</li>
+<li><p>On the left is an illustration of our modelling approach. For example, to predict property crimes at some spatial tile \(r\), we proceed as follows: Step 1: we infer the probabilistic transducers that estimate the event sequence at \(r\) by using as input the sequences of recorded infractions (of different categories) at potentially all remote locations (\(s\), \(s'\) and \(s&rsquo;'\) are shown), where this predictive influence might transpire over different time delays (a few are shown on the edges between \(s\) and \(r\)). Step 2: we combine these weak estimators linearly to minimize zero-one loss. The inferred transducers can be thought of as inferred local activation rules that are then linearly composed, reversing the approach of linearly combining the input and then passing through fixed activation functions in standard neural net architectures. The connected network of nodes (variables) with probabilistic transducers on the edges forms the Granger network. On the right, we show the out-of-sample AUC for predicting violent and property crimes. The prediction is made one week in advance, and the event is registered as a successful prediction if we get a hit within \(\pm1\) day of the predicted date.
 </p>
 </li>
 </ul>
 
 </li>
 </ul>
+<table class="imgtable"><tr><td>
+<a href="./papers/2022_Event-levelPredictionOfUrbanCrimeRevealsSignatureOfEnforcementBias/figure/figure.png"><img src="./papers/2022_Event-levelPredictionOfUrbanCrimeRevealsSignatureOfEnforcementBias/figure/figure.png" alt="Event-level Prediction of Urban Crime Reveals a Signature of Enforcement Bias in US Cities" height="320px" style="padding: 0px 0px 0px 60px ;"/></a>&nbsp;</td>
+<td align="left"></td></tr></table>
 <ul>
-<li><p><i>Yi Huang, Ishanu Chattopadhyay</i>, <a href="./paper/2021_UniversalRiskPhenotypeOfUSCountiesForFlu-likeTransmissionToImproveCountySpecificCOVID-19IncidenceForecasts/paper.pdf" target=&ldquo;blank&rdquo;>Universal Risk Phenotype of US Counties for Flu-like Transmission to Improve County Specific COVID-19 Incidence Forecasts</a>, <b><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009363" target=&ldquo;blank&rdquo;>PLOS Computational Biology</a></b>
+<li><p><i>Yi Huang, Ishanu Chattopadhyay</i>, <a href="./papers/2021_UniversalRiskPhenotypeOfUSCountiesForFlu-likeTransmissionToImproveCountySpecificCOVID-19IncidenceForecasts/paper.pdf" target=&ldquo;blank&rdquo;>Universal Risk Phenotype of US Counties for Flu-like Transmission to Improve County Specific COVID-19 Incidence Forecasts</a>, <b><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009363" target=&ldquo;blank&rdquo;>PLOS Computational Biology</a></b>
 </p>
 <ul>
 <li><p><b>Abstract:</b> The spread of a communicable disease is a complex spatio-temporal process shaped by the specific transmission mechanism, and diverse factors including the behavior, socio-economic and demographic properties of the host population. While the key factors shaping transmission of influenza and COVID-19 are beginning to be broadly understood, making precise forecasts on case count and mortality is still difficult. In this study we introduce the concept of a universal geospatial risk phenotype of individual US counties facilitating flu-like transmission mechanisms. We call this the Universal Influenza-like Transmission (UnIT) score, which is computed as an information-theoretic divergence of the local incidence time series from an high-risk process of epidemic initiation, inferred from almost a decade of flu season incidence data gleaned from the diagnostic history of nearly a third of the US population. Despite being computed from the past seasonal flu incidence records, the UnIT score emerges as the dominant factor explaining incidence trends for the COVID-19 pandemic over putative demographic and socio-economic factors. The predictive ability of the UnIT score is further demonstrated via county-specific weekly case count forecasts which consistently outperform the state of the art models throughout the time-line of the COVID-19 pandemic. This study demonstrates that knowledge of past epidemics may be used to chart the course of future ones, if transmission mechanisms are broadly similar, despite distinct disease processes and causative pathogens.
-
+</p>
+</li>
+<li><p>On the left, we show the calculation of UnIT risk. Our approach begins with collecting weekly county-wise new case counts (Panel a) of the seasonal flu epidemic spanning January 2003 to December 2012 from a large national database of insurance claims records (Truven MarketScan). We identify weekly Influenza diagnoses using ICD codes related to influenza infection (See Materials and methods), and end up with county-specific integer-valued time series for each US county for each flu season. These 471-week-long integer-valued time-series are used to compute pairwise similarity between the counties using our new approach of computing intrinsic similarity between stochastic sample paths (Panel b). This similarity matrix induces county clusters \(C_0\), \(C_1\), \(C_2\) and \(C_3\), inferred via standard spectral clustering. The flu incidence time series allow us to identify counties which register cases in the first couple of weeks of each flu season (Panel c). Averaged over all the seasons this gives us a measure of average epidemic initiation risk. Using the incidence series for the county cluster with maximal average initiation risk we compute a specialized HMMmodel (called PFSA) \(G^{\ast}\) (Panel d). Then, we compute the UnIT risk phenotype of each county as the sequence likelihood divergence (SLD) between the incidence sequence observed and the inferred PFSA model \(G^{\ast}\) (Panel e). Finally (Panels f and g), the urban-UnIT risk is computed by scaling up the UnIT risk with the fraction of urban population in each county, as obtained from US census (Panel f). We show that this risk phenotype is highly predictive of weekly case count of COVID-19, while only dependent on Influenza epidemic history. On the right, we illustrates that the UnITaugmented approach achieves the smallest mean absolute error in one-week ahead county-wise incidence forecasts among the top performing teams from the <a href="https://covid19forecasthub.org/" target=&ldquo;blank&rdquo;>COVID-19 ForecastHub Community</a> (top) and the confirmed weekly total of case count summed over all counties vs our 1-week forecast (bottom).
 </p>
 </li>
 </ul>
 
 </li>
 </ul>
+<table class="imgtable"><tr><td>
+<a href="./papers/2021_UniversalRiskPhenotypeOfUSCountiesForFlu-likeTransmissionToImproveCountySpecificCOVID-19IncidenceForecasts/figure/figure.png"><img src="./papers/2021_UniversalRiskPhenotypeOfUSCountiesForFlu-likeTransmissionToImproveCountySpecificCOVID-19IncidenceForecasts/figure/figure.png" alt="Universal Risk Phenotype of US Counties for Flu-like Transmission to Improve County Specific COVID-19 Incidence Forecasts" height="500px" style="padding: 0px 0px 0px 60px ;"/></a>&nbsp;</td>
+<td align="left"></td></tr></table>
 <ul>
 <li><p><i>Dmytro Onishchenko, Yi Huang, James van Horne, Peter J. Smith, Michael M. Msall, Ishanu Chattopadhyay</i>, <a href="./papers/2021_ReducedFalsePositivesInAutismScreeningViaDigitalBio-MarkersInferredFromDeepCo-MorbidityPatterns/paper.pdf" target=&ldquo;blank&rdquo;>Reduced False Positives in Autism Screening via Digital Biomarkers Inferred From Deep Comorbidity Patterns</a>, <b><a href="https://www.science.org/doi/10.1126/sciadv.abf0354" target=&ldquo;blank&rdquo;>Science Advances</a></b>
 </p>
@@ -193,13 +214,11 @@ UCR Time Series Classification Archive, and show that we at par or better compar
 <h1>Ph.D. Theses: <a href="./papers/2017_PhDThesis_ProblemsInLearningUnderLimitedResourcesAndInformation.pdf" target=&ldquo;blank&rdquo;>Problems in Learning under Limited Resources and Information</a></h1>
 <div id="footer">
 <div id="footer-text">
-Page generated 2022-12-20 10:34:49 Eastern Standard Time, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Page generated 2022-12-20 14:34:16 Eastern Standard Time, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>
 </tr>
 </table>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">_uacct = "UA-0000000-0"; urchinTracker();</script>
 </body>
 </html>
