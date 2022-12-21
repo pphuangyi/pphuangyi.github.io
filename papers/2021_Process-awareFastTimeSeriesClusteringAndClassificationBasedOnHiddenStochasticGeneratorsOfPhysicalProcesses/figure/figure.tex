@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0] (P) at (0, 0) {\includegraphics[height=13.5cm]{pipeline.png}};
+	\node[inner sep=0, anchor=west] (T) at ([xshift=1.5cm]P.east) {\includegraphics[height=13.5cm]{table.png}};
+
+\end{tikzpicture}
+
+\end{document}

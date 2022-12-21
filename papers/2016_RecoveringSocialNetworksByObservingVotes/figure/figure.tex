@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0] (E) at (0, 0) {\includegraphics[height=13.5cm]{networks_edge.png}};
+	\node[inner sep=0, anchor=west] (V) at ([xshift=1.5cm]E.east) {\includegraphics[height=13.5cm]{networks_vertex.png}};
+
+\end{tikzpicture}
+
+\end{document}

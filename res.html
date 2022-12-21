@@ -89,7 +89,7 @@ needs, this work revisits the classic CycleGAN framework and boosts its performa
 <li><p><b>Abstract:</b> The spread of a communicable disease is a complex spatio-temporal process shaped by the specific transmission mechanism, and diverse factors including the behavior, socio-economic and demographic properties of the host population. While the key factors shaping transmission of influenza and COVID-19 are beginning to be broadly understood, making precise forecasts on case count and mortality is still difficult. In this study we introduce the concept of a universal geospatial risk phenotype of individual US counties facilitating flu-like transmission mechanisms. We call this the Universal Influenza-like Transmission (UnIT) score, which is computed as an information-theoretic divergence of the local incidence time series from an high-risk process of epidemic initiation, inferred from almost a decade of flu season incidence data gleaned from the diagnostic history of nearly a third of the US population. Despite being computed from the past seasonal flu incidence records, the UnIT score emerges as the dominant factor explaining incidence trends for the COVID-19 pandemic over putative demographic and socio-economic factors. The predictive ability of the UnIT score is further demonstrated via county-specific weekly case count forecasts which consistently outperform the state of the art models throughout the time-line of the COVID-19 pandemic. This study demonstrates that knowledge of past epidemics may be used to chart the course of future ones, if transmission mechanisms are broadly similar, despite distinct disease processes and causative pathogens.
 </p>
 </li>
-<li><p><b>Figure:</b> On the left, we show the calculation of UnIT risk. Our approach begins with collecting weekly county-wise new case counts (Panel a) of the seasonal flu epidemic spanning January 2003 to December 2012 from a large national database of insurance claims records (Truven MarketScan). We identify weekly Influenza diagnoses using ICD codes related to influenza infection (See Materials and methods), and end up with county-specific integer-valued time series for each US county for each flu season. These 471-week-long integer-valued time-series are used to compute pairwise similarity between the counties using our new approach of computing intrinsic similarity between stochastic sample paths (Panel b). This similarity matrix induces county clusters \(C_0\), \(C_1\), \(C_2\) and \(C_3\), inferred via standard spectral clustering. The flu incidence time series allow us to identify counties which register cases in the first couple of weeks of each flu season (Panel c). Averaged over all the seasons this gives us a measure of average epidemic initiation risk. Using the incidence series for the county cluster with maximal average initiation risk we compute a specialized HMMmodel (called PFSA) \(G^{\ast}\) (Panel d). Then, we compute the UnIT risk phenotype of each county as the sequence likelihood divergence (SLD) between the incidence sequence observed and the inferred PFSA model \(G^{\ast}\) (Panel e). Finally (Panels f and g), the urban-UnIT risk is computed by scaling up the UnIT risk with the fraction of urban population in each county, as obtained from US census (Panel f). We show that this risk phenotype is highly predictive of weekly case count of COVID-19, while only dependent on Influenza epidemic history. On the right, we illustrates that the UnITaugmented approach achieves the smallest mean absolute error in one-week ahead county-wise incidence forecasts among the top performing teams from the <a href="https://covid19forecasthub.org/" target=&ldquo;blank&rdquo;>COVID-19 ForecastHub Community</a> (top) and the confirmed weekly total of case count summed over all counties vs our 1-week forecast (bottom).
+<li><p><b>Figure:</b> On the left, we show the calculation of UnIT risk. Our approach begins with collecting weekly county-wise new case counts (Panel a) of the seasonal flu epidemic spanning January 2003 to December 2012 from a large national database of insurance claims records (Truven MarketScan). We identify weekly Influenza diagnoses using ICD codes related to influenza infection, and end up with county-specific integer-valued time series for each US county for each flu season. These 471-week-long integer-valued time-series are used to compute pairwise similarity between the counties using our new approach of computing intrinsic similarity between stochastic sample paths (Panel b). This similarity matrix induces county clusters \(C_0\), \(C_1\), \(C_2\) and \(C_3\), inferred via standard spectral clustering. The flu incidence time series allow us to identify counties which register cases in the first couple of weeks of each flu season (Panel c). Averaged over all the seasons, this gives us a measure of average epidemic initiation risk. Using the incidence series for the county cluster with maximal average initiation risk we compute a specialized HMMmodel (called PFSA) \(G^{\ast}\) (Panel d). Then, we compute the UnIT risk phenotype of each county as the sequence likelihood divergence (SLD) between the incidence sequence observed and the inferred PFSA model \(G^{\ast}\) (Panel e). Finally (Panels f and g), the urban-UnIT risk is computed by scaling up the UnIT risk with the fraction of urban population in each county, as obtained from US census (Panel f). We show that this risk phenotype is highly predictive of weekly case count of COVID-19, while only dependent on Influenza epidemic history. On the right, we illustrates that the UnITaugmented approach achieves the smallest mean absolute error in one-week ahead county-wise incidence forecasts among the top performing teams from the <a href="https://covid19forecasthub.org/" target=&ldquo;blank&rdquo;>COVID-19 ForecastHub Community</a> (top) and the confirmed weekly total of case count summed over all counties vs our 1-week forecast (bottom).
 </p>
 </li>
 </ul>
@@ -156,46 +156,52 @@ UCR Time Series Classification Archive, and show that we at par or better compar
 </p>
 <ul>
 <li><p><b>Abstract:</b> Inspired by recent interests in developing machine learning and data mining algorithms for hypergraphs, here we investigate the semi-supervised learning algorithm of propagating &ldquo;soft labels&rdquo; (e.g. probability distributions, class membership scores) over hypergraphs, by means of optimal transportation. Borrowing insights from Wasserstein propagation on graphs [Solomon et al. 2014], we reformulate the label propagation procedure as a message-passing algorithm, which renders itself naturally to a generalization applicable to hypergraphs through Wasserstein barycenters. Furthermore, in a PAC learning framework, we provide generalization error bounds for propagating 1-dimensional distributions on graphs and hypergraphs using 2-Wasserstein distance, by establishing the algorithmic stability of the proposed semi-supervised learning algorithm. These theoretical results also offer novel insight and deeper understanding about Wasserstein propagation on graphs.
-
-
-
-
+</p>
+</li>
+<li><p><b>Figure:</b> (a) and (b) compare the classification performance of label propagation v.s. those of AdaBoost, Random forest, and SVM on hypergraphs generated with the stochastic block model over 100 vertices. Figure (c) and (d) compare the classification performance of label propagation v.s. that of SVM on two UCI datastes. 
 </p>
 </li>
 </ul>
 
 </li>
 </ul>
+<table class="imgtable"><tr><td>
+<a href="./papers/2019_WassersteinSoftLabelPropagationOnHypergraphs/figure/figure.png"><img src="./papers/2019_WassersteinSoftLabelPropagationOnHypergraphs/figure/figure.png" alt="Wasserstein Soft Label Propagation on Hypergraphs" height="200px" style="padding: 0px 0px 0px 60px ;"/></a>&nbsp;</td>
+<td align="left"></td></tr></table>
 <ul>
 <li><p><i>Shahab Asoodeh, Yi Huang, and Ishanu Chattopadhyay</i>, <a href="./papers/2018_ATamper-FreeSemi-UniversalCommunicationSystemForDeletionChannels/paper.pdf" target=&ldquo;blank&rdquo;>A Tamper-Free Semi-Universal Communication System for Deletion Channels</a>, <b><a href="https://cdc2018.ieeecss.org" target=&ldquo;blank&rdquo;>CDC 2018</a></b>
 </p>
 <ul>
 <li><p><b>Abstract:</b> We investigate the problem of reliable communication between two legitimate parties over deletion channels under an active eavesdropping (aka jamming) adversarial model. To this goal, we develop a theoretical framework based on probabilistic finite- state automata to define novel encoding and decoding schemes that ensure small error probability in both message decoding as well as tamper detecting. We then experimentally verify the reliability and tamper-detection property of our scheme.
-
-
-
-
+</p>
+</li>
+<li><p><b>Figure:</b> The four images on left show how different deletion rates of the channel affect the space of M2 machines&ndash;the larger the deletion rate, the closer the resulting machine to being a single-state machine. The four images on the right show sets of 10 and 20 machines chosen by a hill-climbing algorithm to represent the messages, how they are affected by deletion, and how the error rate of recoving the message decreases with increasing sequence lengths.  
 </p>
 </li>
 </ul>
 
 </li>
 </ul>
+<table class="imgtable"><tr><td>
+<a href="./papers/2018_ATamper-FreeSemi-UniversalCommunicationSystemForDeletionChannels/figure/figure.png"><img src="./papers/2018_ATamper-FreeSemi-UniversalCommunicationSystemForDeletionChannels/figure/figure.png" alt="A Tamper-Free Semi-Universal Communication System for Deletion Channels" height="150px" style="padding: 0px 0px 0px 60px ;"/></a>&nbsp;</td>
+<td align="left"></td></tr></table>
 <ul>
 <li><p><i>Yi Huang, Mano Vikash Janardhanan, and Lev Reyzin</i>, <a href="./papers/2017_NetworkConstructionWithOrderedConstraints/paper.pdf" target=&ldquo;blank&rdquo;>Network Construction with Ordered Constraints</a>, <b><a href="http://fsttcs.org/archives/2017/" target=&ldquo;blank&rdquo;>FSTTCS 2017</a></b>
 </p>
 <ul>
 <li><p><b>Abstract:</b> In this paper, we study the problem of constructing a network by observing ordered connectivity constraints, which we define herein. These ordered constraints are made to capture realistic properties of real-world problems that are not reflected in previous, more general models. We give hardness of approximation results and nearly-matching upper bounds for the offline problem, and we study the online problem in both general graphs and restricted sub-classes. In the online problem, for general graphs, we give exponentially better upper bounds than exist for algorithms for general connectivity problems. For the restricted classes of stars and paths we are able to find algorithms with optimal competitive ratios, the latter of which involve analysis using a potential function defined over PQ-trees.
-
-
-
-
+</p>
+</li>
+<li><p><b>Figure:</b> The following figures show patterns and their replacements of the PQ-trees that show up in the analysis of the competitive ratio of path.
 </p>
 </li>
 </ul>
 
 </li>
 </ul>
+<table class="imgtable"><tr><td>
+<a href="./papers/2017_NetworkConstructionWithOrderedConstraints/figure/figure.png"><img src="./papers/2017_NetworkConstructionWithOrderedConstraints/figure/figure.png" alt="Network Construction with Ordered Constraints" height="320px" style="padding: 0px 0px 0px 60px ;"/></a>&nbsp;</td>
+<td align="left"></td></tr></table>
 <ul>
 <li><p><i>Benjamin Fish, Yi Huang, and Lev Reyzin</i>, <a href="./papers/2016_RecoveringSocialNetworksByObservingVotes/paper.pdf" target=&ldquo;blank&rdquo;>Recovering Social Networks by Observing Votes</a>, <b><a href="https://sis.smu.edu.sg/aamas2016" target=&ldquo;blank&rdquo;>AAMAS 2016</a></b>
 </p>
@@ -217,21 +223,23 @@ UCR Time Series Classification Archive, and show that we at par or better compar
 <li><p><i>Yi Huang, Brian Powers, and Lev Reyzin</i>, <a href="./papers/2015_TrainingTimeOptimizationOfABudgetedBooster/paper.pdf" target=&ldquo;blank&rdquo;>Training-Time Optimization of a Budgeted Booster</a>, <b><a href="https://ijcai-15.org" target=&ldquo;blank&rdquo;>IJCAI2015</a></b>
 </p>
 <ul>
-<li><p><b>Abstract:</b> We consider the problem of feature-efficient prediction &ndash; a setting where features have costs and the learner is limited by a budget constraint on the total cost of the features it can examine in test time. We focus on solving this problem with boosting by optimizing the choice of base learners in the training phase and stopping the boosting process when the learner's budget runs out. We experimentally show that our method improves upon the boosting approach AdaBoostRS [Reyzin, 2011] and in many cases also outperforms the recent algorithm SpeedBoost [Grubb and Bagnell, 2012]. We provide a theoretical justication for our optimization method via the margin bound. We also experimentally show that our method outperforms pruned decision trees, a natural budgeted classifier.
-
-
-
-
+<li><p><b>Abstract:</b> We consider the problem of feature-efficient prediction &ndash; a setting where features have costs and the learner is limited by a budget constraint on the total cost of the features it can examine in test time. We focus on solving this problem with boosting by optimizing the choice of base learners in the training phase and stopping the boosting process when the learner's budget runs out. We experimentally show that our method improves upon the boosting approach AdaBoostRS and in many cases also outperforms the recent algorithm SpeedBoost. We provide a theoretical justication for our optimization method via the margin bound. We also experimentally show that our method outperforms pruned decision trees, a natural budgeted classifier.
+</p>
+</li>
+<li><p><b>Figure:</b> The image on the right shows the comparison of error rates v.s. costs of methods we metion in this paper on three datasets from the UCI machine learning repository, and the image on the right is that for Yahoo Webscop set 2 where the cost is real CPU time.
 </p>
 </li>
 </ul>
 
 </li>
 </ul>
+<table class="imgtable"><tr><td>
+<a href="./papers/2015_TrainingTimeOptimizationOfABudgetedBooster/figure/figure.png"><img src="./papers/2015_TrainingTimeOptimizationOfABudgetedBooster/figure/figure.png" alt="Training-Time Optimization of a Budgeted Booster" height="275px" style="padding: 0px 0px 0px 60px ;"/></a>&nbsp;</td>
+<td align="left"></td></tr></table>
 <h1>Ph.D. Theses: <a href="./papers/2017_PhDThesis_ProblemsInLearningUnderLimitedResourcesAndInformation.pdf" target=&ldquo;blank&rdquo;>Problems in Learning under Limited Resources and Information</a></h1>
 <div id="footer">
 <div id="footer-text">
-Page generated 2022-12-20 19:07:10 Eastern Standard Time, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Page generated 2022-12-21 10:37:52 Eastern Standard Time, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>

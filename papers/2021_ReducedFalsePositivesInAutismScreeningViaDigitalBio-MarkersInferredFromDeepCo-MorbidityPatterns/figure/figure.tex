@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0, anchor=west] (A) at (0, 0) {\includegraphics[height=13.5cm]{auc_male.png}};
+	\node[inner sep=0, anchor=north west] (B) at ([xshift=1cm]A.north east) {\includegraphics[height=13.5cm]{auc_female.png}};
+	\node[inner sep=0, anchor=north west] (C) at ([xshift=1cm]B.north east) {\includegraphics[height=13.5cm]{coef_rotated.png}};
+\end{tikzpicture}
+
+\end{document}
