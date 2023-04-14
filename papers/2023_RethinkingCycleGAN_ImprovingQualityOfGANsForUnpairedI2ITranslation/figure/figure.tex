@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+	\node[inner sep=0] (CycleGAN) at (0, 0) {\includegraphics[width=13.5cm]{2023_RethinkingCycleGAN_cyclegan.png}};
+	\node[inner sep=0, anchor=south west] (CycleGANLabel) at (CycleGAN.north west) {A visual demonstracion of CycleGAN};
+	\node[inner sep=0, anchor=north west] (Gen) at ([yshift=-.5cm]CycleGAN.south west) {\includegraphics[width=13.5cm]{2023_RethinkingCycleGAN_uvcgan2.png}};	
+	\node[inner sep=0, anchor=south west] (GenLabel) at (Gen.north west) {UVCGANv2 Generator};
+	\node[inner sep=0, anchor=north west] (M2F) at ([yshift=.5cm, xshift=.15cm]CycleGAN.north east) {\includegraphics[trim=0 0 0 20, clip, width=9.5cm]{2023_RethinkingCycleGAN_male2female.png}};
+	\node[inner sep=0, anchor=north west] (W2C) at (M2F.south west) {\includegraphics[trim=0 0 0 37, clip, width=9.5cm]{2023_RethinkingCycleGAN_wild2cat.png}};
+\end{tikzpicture}
+
+\end{document}
