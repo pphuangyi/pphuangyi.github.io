@@ -1546,9 +1546,11 @@ def procfile(f):
           # {}{img_left}{source}{alttext}{width}{height}{linktarget}{indentation in px}.
           g += ['']*(8 - len(g))
           
+          # width
           if g[4].isdigit():
             g[4] += 'px'
 
+          # height
           if g[5].isdigit():
             g[5] += 'px'
 
