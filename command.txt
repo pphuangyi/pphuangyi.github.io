@@ -1,0 +1,1 @@
+python jemdoc_mathjax-master\jemdoc_new -c mysite.conf index.jemdoc res.jemdoc
